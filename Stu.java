@@ -245,7 +245,6 @@ public class Stu {
         System.exit(0);
     }
     //打印用户信息
-    //420683200303080334
     public static void showUser(StuUser s){
         System.out.println("用户名:\t"+s.getName());
         System.out.println("电话号码:\t"+s.getPhoneNumber());
