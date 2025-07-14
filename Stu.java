@@ -15,7 +15,8 @@ public class Stu {
         System.out.println("****************学生管理系统*****************");
         System.out.println("1.登录系统");
         System.out.println("2.新用户，注册并登录");
-        System.out.println("3(&其他输入).退出该系统");
+        System.out.println("3.忘记密码？");
+        System.out.println("4(&其他输入).退出该系统");
         System.out.println("请输入你的选择：");
     }
     //初始页面功能
@@ -31,11 +32,40 @@ public class Stu {
                 case "2":
                     logon(list,uList,sc);
                     break;
+                case "3":
+                    passwordBack(uList,sc);
+                    break;
                 default:
                     temp="exit";
                     break;
             }
         }while(!temp.equals("exit"));
+    }
+    //修改密码
+    public static void passwordBack(ArrayList<StuUser> uList,Scanner sc){
+        System.out.println("*****************找回密码******************");
+        System.out.println("请输入用户名:");
+        String name=sc.next();
+        int digit=checkUser(uList,name);
+        if(digit==-1){
+            System.out.println("用户名不存在！");
+            return;
+        }
+        System.out.println("输入密保电话号码:");
+        String phone=sc.next();
+        if(!uList.get(digit).getPhoneNumber().equals(phone)){
+            System.out.println("电话号码不正确！");
+            return;
+        }
+        String code=createCode();
+        System.out.println("验证码:\t"+code);
+        System.out.println("请输入验证码：");
+        String codeInput=sc.next();
+        if(code.equals(codeInput)){
+            System.out.println("原密码为："+uList.get(digit).getPassword());
+        }else{
+            System.out.println("验证码错误！");
+        }
     }
     //注册页面
     public static void logon(ArrayList<Student> list, ArrayList<StuUser> uList,Scanner sc){
@@ -242,7 +272,6 @@ public class Stu {
                     break;
             }
         }while(!temp.equals("exit"));
-        System.exit(0);
     }
     //打印用户信息
     public static void showUser(StuUser s){
