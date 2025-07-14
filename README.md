@@ -1,3 +1,4 @@
+下载时务必将全部代码保留在同一文件夹，Stu.java为main文件，Student.java与StuUser.java为Stu.java运行所需的Javabean文件。
 推荐使用JDK21来运行该代码。
 使用命令行cd到存放源代码的文件夹
 输入：
