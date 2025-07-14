@@ -1,7 +1,8 @@
 下载时务必将全部代码保留在同一文件夹，Stu.java为main文件，Student.java与StuUser.java为Stu.java运行所需的Javabean文件。推荐使用JDK21来运行该代码。
 
 系统流程：
-<img width="1310" height="1596" alt="899ff321c70e98" src="https://github.com/user-attachments/assets/33420386-eb19-40ea-8fd5-5a9f8554a3c6" />
+<img width="1142" height="940" alt="b59b916d362c9" src="https://github.com/user-attachments/assets/e444e19b-5e8b-4408-9c0f-b8cdf1c84c86" />
+
 
 
 
@@ -46,6 +47,8 @@ id: k003, 姓名: 小张, 年龄: 20, 地址: 北京
 选择“1”登录：输入用户名和密码，验证通过后进入主菜单。
 
 选择“2”注册：按照要求输入用户名、密码、确认密码、身份证号、手机号，并输入正确的验证码，注册成功后自动登录。
+
+选择“3”找回密码：按照要求输入用户名、电话、并输入正确的验证码，找回密码。
 
 选择其他则退出系统。
 
